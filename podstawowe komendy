@@ -1,0 +1,20 @@
+pwd-scieżka
+who-kto jest aktywny na serwie
+who am I-informacje o twoim polaczeniu
+ls-pokazuje elementy nalazace do katalogu
+man ls-opis komendy ls
+ls -l -extended opis elementow
+ls -a -wyswietlenie wszytkiego, nawet ukryte
+ls -al -to co powyzej
+. ten katlog
+.. katalog nadrzędny
+
+nazwa zaczynajaca sie od kropki sprawia ze jest ukryty
+
+Właściciel nazwa grupy właściciela
+
+mkdir-tworzenie katalogu
+rmdir-usuwanie katalogu
+cd-zmiana katalogu
+tree-wyswietala w formie drzewa katalogi
+tree -d -L (liczba) pokazuje katalogi na podanej glebokosci
