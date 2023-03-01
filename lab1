@@ -1,0 +1,16 @@
+man (...)- pomoc o danym poleceniu
+(...) --help - tak samo jak man
+nano - interfejs do towrzenia plikow
+touch - tworzenie, dzialanie na pliku
+cat - podglad pliku
+echo (...) > - tworzenie pliku
+ln (cel) (nazwa dowiaznia) dowiazanie twarde do pliku(usuniecie pliku, nie sprawia usuniecia zawartosci w dowiazaniu)
+rm -r - usuuwanie nie puste katologi i cale jego podrzewo, jeżeli jest puste
+ln -s -dowiązanie symboliczne (usunienie pliku, sprawia usunienie zawartosci w dowiazaniu)
+ls (...) -i -identyfikator pliku
+
+user(rwx)-group(rwx)-other(rwx)
+
+chmode - zmina uprawnien
+cp (co kopiowac) (gdzie) - kopiowanie pliku
+mv - przeniesienie(wytnij,wklej) można zmienić tez nazwe pliku
