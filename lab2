@@ -1,0 +1,19 @@
+i:~/Notatki$ drwxr-xr-x 2 s164400 domain users 4096 03-08 10:29 Kopie
+-rwxrw-r-- 1 s164400 domain users 1451 03-08 10:28 Zapiski.txt
+
+lrwxrwxrwx 1 s164400 domain users   22 03-08 10:31 AdZapisek -> ../Notatki/Zapiski.txt
+-rwxr--r-- 1 s164400 domain users 1451 03-08 10:34 ZapiskiKopia
+
+0022
+
+0666 pliki
+0777 katologi
+
+0666-0022=0644
+0777-0022=0755
+
+0666-0027=0640 plik 
+0777-0027=0750 katalog 
+
+SO musi: wyszukać plik w strukturze katalogów, odczytać inf. o nim, 
+sprawdzić prawa dostępu, jeżeli pozwalają – to: otworzyć plik w odpowiednim trybie – do odczytu, odczytać potrzebne dane, zamknąć plik.
