@@ -1,0 +1,34 @@
+1.
+a) echo pochmurnie > dane22.txt
+   ls -l >> dane22.txt
+   pwd >> dane22.txt
+
+b) tree -d > drzewo.txt
+   cat dane22.txt > wynik.txt
+   cat drzewo.txt >> wynik.txt
+
+c) head < dane22.txt drzewo.txt wynik.txt > razem.txt
+
+d) who | wc -l
+
+e) ls | wc -l
+
+2.
+a) find $HOME –maxdepth 1 –empty –type f
+
+b) find /dev -type c | wc -l
+
+c) find $HOME -maxdepth 1 -type d -perm -u=rx
+
+d) find ./[a-f,w]* -type f -exec cat {} \;
+
+e) find $HOME -maxdepth 3 -type f -cmin -30 -mmin -30 -size +0
+
+f) find -type f -amin -30
+   find -type f -cmin -30
+   find -type f -mmin -30
+
+3.
+a) find /dev -type b | wc -l
+b) find  ./[a,c-e,w]* -type f -exec cat {} \; | wc -l
+c) find $HOME -mindepth 2 -maxdepth 3 -type d | wc -l
