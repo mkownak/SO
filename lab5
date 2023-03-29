@@ -1,0 +1,14 @@
+zad 1
+liczba1=10
+liczba2=15
+if [ $liczba1 -lt $liczba2 ]; then echo "liczba1 jest mniejsza od liczby2"; else echo "liczba2 jest mniejsza od liczby1"; fi
+
+zad 2
+if [ -f $HOME/dane.txt ]; then echo "w katalogu domowym jest plik dane.txt"; else echo "w katalogu domowym nie ma pliku dane.txt"; fi
+
+zad 3
+a="ALA"
+if [ -n "$a" ]; then echo "jest niezerowy"; else echo "jest zerowy"; fi
+
+zad 4
+if [ $HOME = $PWD ]; then echo "jest to katalog domowy"; else echo "nie jest to katalog domowy"; fi
