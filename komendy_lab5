@@ -1,0 +1,50 @@
+a=10 utowrzenie i przypisanie zmiennej
+echo $a wyswietlenie zawartosci zmiennej
+
+if test $a = $b
+> then echo ok
+> else NIE OK
+>fi
+
+if test $a=$b; then echo OK; else echo NIE OK; fi
+OK [błąd]
+
+if test $a = $b; then echo OK; else echo NIE OK; fi
+NIE OK
+
+if [ $a = $b ]; then echo OK; else echo NIE OK; fi
+NIE OK
+
+a="he he"
+b="x d"
+
+if [ $a = $b ]; then echo OK; else echo NIE OK; fi
+za druzo argumentow
+
+if [ "$a" = "$b" ]; then echo OK; else echo NIE OK; fi
+NIE OK
+
+unset a usuniecie zmiennej
+
+case $a in sprawdzanie przypadkow
+>"OLA") echo OLA; ls;;
+>"ELA") echo ELA; pwd;;
+>"ALA") echo ALA; ls -l;;
+>esac
+
+for a in Jeden dwa trzy cztery pięć (a przyjmuje wartosci po inie)
+>do
+>echo $a
+>done
+
+for a in * (* katalog biezacy)
+>do
+>echo $a
+>done
+
+ile=0
+for a in *
+>do if [ -f "$a" ]
+>then ile=$(($ile+1))
+>fi
+>done
