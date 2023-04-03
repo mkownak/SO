@@ -1,0 +1,31 @@
+Zad.1
+a=10
+while [ $a -lt 35 ]; do echo $a; a=$(($a+1)); done
+
+a=35
+while [ $a -gt 9 ]; do echo $a; a=$(($a-1)); done
+
+Zad.2
+ile=0
+for a in *; do if [ -d "$a" ]; then echo $a; ile=$(($ile+1)); fi; done
+
+Zad.3
+ile=0
+for a in a*; do if [ -f "$a" ]; then echo $a; ile=$(($ile+1)); fi; done
+
+ile=0
+for a in ~/*??a???*; do if [ -f "$a" ]; then echo $a; ile=$(($ile+1)); fi; done
+
+Zad.4
+ile=0
+for a in $( find $HOME -type f -perm /u+x,g+x,o+x ); do echo $a; done
+
+Zad.5
+podkatalogi=0
+pliki=0
+plik_zero=0
+for a in ~/*; do if [ -f "$a" ] && [ ! -s "$a" ]; then plik_zero=$(($plik_zero+1));
+ elif [ -d "$a" ]; then podkatalogi=$(($podkatalogi+1));
+ elif [ -f "$a" ]; then pliki=$(($plik+1)); fi; done
+
+kolejnosc warunków ma znaczenie(jeżeli jakis warunek jest spełniony to reszta nie jest sprawdzana. Dziwne w chuj)
