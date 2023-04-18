@@ -1,0 +1,122 @@
+zad.1
+mkdir katalog_test
+ls -l
+chmod 744 ./katalog_test
+rmdir katalog_test
+
+zad.2
+nano plik.txt (edytor)
+echo "sotomek" > nowy_plik.txt
+chmod 777 ./plik.txt
+chmod u+r ./nowy_plik.txt
+cat plik.txt >> nowy_plik.txt (dopisanie zawartosci plik.txt do nowy_plik.txt)
+cp ./aput.txt ./notki_kolos/skopiowany
+find ./ -type f -name "n*" (znajdz pliki zaczynajace sie na litery n)
+
+zad.3
+touch ./zmienne.txt
+echo $USER > zmienne.txt
+echo $HOME >> zmienne.txt
+my_variable=10
+echo $my_variable >> zmienne.txt
+mv ./zmienne.txt ./$USER
+find ./ -type f -name "s164*"
+find . -type f -exec grep -l "10" {} \; | wc -l
+(grep -l szukanie wedlug wzorca)
+
+zad.4
+cat etc/passwd
+cat /etc/passwd | cut -d: -f1,3,4
+(cut -d: określenie separatora)
+(-f1,3,4 okreslenie pol odzielonych separatorami)
+
+zad.5
+find . -maxdepth 2 -type f -mtime -2
+
+zad.6
+find $HOME -type d -perm 644
+
+zad.7
+ls -l > Spis.txt
+
+zad.8
+if [ -n "$ab" ]; then echo "nie jest pusta"; else ab="22"; fi
+
+a=1
+while [ $a -lt 47 ]; do echo $a; a=$(($a+3)); done
+
+zad.9
+ls > dane.txt
+find ~ -maxdepth 1 -type f | wc -l >> dane.txt
+find ~ -maxdepth 1 -type f | wc -l >> dane.txt
+
+zad.10
+tree -d > Opisy.txt
+chmod 762 ~/Opisy.txt
+
+zad.11
+cat Opisy.txt | wc -w
+
+zad.12
+cat plik | tr –s „ ” | cut –d” ” -f1,3-5 | wc -l
+cat wczytanie pliku
+tr -s " " usunięcie wielokrotnych spacji
+cut -d" " -f1,3-5 bierze konkretne pola, które odzielone spacjami
+wc -l liczenie linijek
+
+zad.13
+skip
+
+zad.14
+a=$PWD
+if [ $HOME = $a ]; then echo "jest to katolog domowy"; else echo "nie jest to katalog domowy"; fi
+
+zad.15
+ls -l ./
+ew
+ls -l ./ | cut -d" " -f3-6,9
+
+zad.16
+cat /etc/passwd | cut -d":" -f1,7
+
+zad.17
+skip
+
+zad.18
+skip
+
+zad.19
+ln -s ~/dane ~/dowiazanie
+
+zad.20
+ls -l /dev | grep "^c" > ~/Opisy.txt
+cat Opisy.txt | wc -l >> Opisy.txt
+
+zad.21
+skip
+
+zad.22
+skip
+
+zad.23
+skip
+
+zad.23.1
+find ~ -maxdepth 2 -type d > Zawartosc_katalogu
+
+zad.24
+skip
+
+zad.25
+mkdir ./urzedowe
+chmod 654 ./urzedowe
+touch ./urzedowe/uzytkownicy
+cat /etc/passwd | cut -d":" -f1,7 > ./urzedowe/uzytkownicy
+
+zad.26
+env | grep '^[K-T]' > ~/Srodowisko
+
+zad.27 skip
+
+
+
