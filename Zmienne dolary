@@ -1,0 +1,7 @@
+$0 scieżka do katalogu
+$* wszystkie parametry
+echo $1, $2 itd przechowuje kolejne parametry
+$# liczba parametrow
+$$ numer procesu
+$? odczytuje kod zwrotu (0)
+$@ wszystkie parametry
