@@ -1,0 +1,56 @@
+Zad.1
+
+find ./kolo -type d | wc -l  #ilosc z katalogiem kolo
+
+Zad.2
+find ./kolo/dane -type f -name ".*" | wc -l
+
+Zad.3
+find ./kolo/dane -type f -size 0 | wc -l
+
+Zad.5
+find ./kolo -type f -size 0 -name "?????????*" && find ./kolo -type f -size 0 -name "?????????*" | wc -l
+
+Zad.6
+ps -A > procesy
+ps -eo pid,etimes,args | awk '$2 >= 600 {print}' > procesy_dlugotrwale
+ps -eo pid,etimes,args | awk '$2 < 600 {print}' > procesy_krotkotrwale
+
+Zad.7
+if [ -f ./dane/listy/list_do_adama.txt ] && [ -f ./dane/listy/list_do_ani.txt ] && [ -f ./dane/listy/list_do_zosi.txt ]; 
+then ./dane/listy/list_do_adama.txt >> ./dane/jawne/stare/dane1.dat && exit 100; else echo "faza"; fi
+
+Zad.8
+to samo co 7 tylko zamiast '&&' to '||'
+
+Zad.9
+find ~ -type d -name "AB4444"  #/home/domena/s164400/user1/internet
+zmienna=$(find ~ -type d -name "AB4444")
+dlugosc=${#zmienna}
+nowa_zmienna=${zmienna%user1} # usuniecie wszystkiego do i wraz z "user1" od prawej strony
+nowa_zmienna=${zmienna*domena} # usuniecie wszystkiego do i wraz z "domena" od lewej strony
+dlugosc2=${#nowa_zmienna}
+
+zad.10
+
+#!/bin/bash
+
+# Funkcja do obliczania narastającej sumy czasów trwania procesów
+oblicz_sume_czasow() {
+    plik="$1"
+    suma=0
+    liczba_procesow=0
+
+    while read -r linia; do
+        czas_trwania=$(echo "$linia" | awk '{print $2}')
+        suma=$((suma + czas_trwania))
+        liczba_procesow=$((liczba_procesow + 1))
+    done < "$plik"
+
+    echo "Suma czasów: $suma / Liczba procesów: $liczba_procesow"
+}
+
+# Wywołanie funkcji dla różnych plików
+oblicz_sume_czasow "procesy"
+oblicz_sume_czasow "procesy_dlugotrwale"
+oblicz_sume_czasow "procesy_krotkotrwale"
