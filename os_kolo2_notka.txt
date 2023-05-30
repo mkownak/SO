@@ -1,6 +1,7 @@
 Zad.1
 
 find ./kolo -type d | wc -l  #ilosc z katalogiem kolo
+find ./kolo -type d | grep '^./' #bez katalogu
 
 Zad.2
 find ./kolo/dane -type f -name ".*" | wc -l
