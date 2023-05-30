@@ -13,6 +13,7 @@ find ./kolo -type f -size 0 -name "?????????*" && find ./kolo -type f -size 0 -n
 
 Zad.6
 ps -A > procesy
+ps -eo pid,etimes,args
 ps -eo pid,etimes,args | awk '$2 >= 600 {print}' > procesy_dlugotrwale
 ps -eo pid,etimes,args | awk '$2 < 600 {print}' > procesy_krotkotrwale
 
