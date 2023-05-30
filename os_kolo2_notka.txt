@@ -12,8 +12,8 @@ Zad.5
 find ./kolo -type f -size 0 -name "?????????*" && find ./kolo -type f -size 0 -name "?????????*" | wc -l
 
 Zad.6
-ps -A > procesy
-ps -eo pid,etimes,args
+ps -A > procesy #skip
+ps -eo pid,etimes,args > procesy
 ps -eo pid,etimes,args | awk '$2 >= 600 {print}' > procesy_dlugotrwale
 ps -eo pid,etimes,args | awk '$2 < 600 {print}' > procesy_krotkotrwale
 
